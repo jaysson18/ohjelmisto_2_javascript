@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting program</title>
+</head>
+<body>
+    <script>
+        var name = prompt("Enter your name: ");
+
+        if (name) {
+            var greeting = "Hello, " + name + "!";
+
+            var paragraph = document.createElement("p");
+            paragraph.textContent = greeting;
+
+            document.body.appendChild(paragraph);
+        }   else {
+            var noNameMessage = "Hello, anonymous!";
+            var paragraph = document.createElement("p");
+            paragraph.textContent = noNameMessage;
+            document.body.appendChild(paragraph);
+        }
+    </script>
+</body>
+</html>
