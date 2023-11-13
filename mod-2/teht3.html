@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dog Names in Reverse Alphabetical Order</title>
+</head>
+<body>
+  <script>
+
+    function getDogNames() {
+      let dogNames = [];
+
+      for (let i = 0; i < 6; i++) {
+        let name = prompt("Enter the name of dog " + (i + 1) + ":");
+        dogNames.push(name);
+      }
+
+      displayReverseSortedNames(dogNames);
+    }
+
+
+    function displayReverseSortedNames(names) {
+      names.sort();
+      names.reverse();
+      document.write("<h2>Dog Names in Reverse Alphabetical Order:</h2>");
+      document.write("<ul>");
+      names.forEach(function(name) {
+        document.write("<li>" + name + "</li>");
+      });
+      document.write("</ul>");
+    }
+
+
+    getDogNames();
+  </script>
+</body>
+</html>

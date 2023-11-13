@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Participants List</title>
+</head>
+<body>
+  <script>
+
+    function getParticipantNames() {
+      let numParticipants = prompt("Enter the number of participants:");
+      let participantNames = [];
+
+      for (let i = 0; i < numParticipants; i++) {
+        let name = prompt("Enter name of participant " + (i + 1) + ":");
+        participantNames.push(name);
+      }
+
+      displaySortedNames(participantNames);
+    }
+
+
+    function displaySortedNames(names) {
+      names.sort();
+      document.write("<h2>Participant Names in Alphabetical Order:</h2>");
+      document.write("<ol>");
+      names.forEach(function(name) {
+        document.write("<li>" + name + "</li>");
+      });
+      document.write("</ol>");
+    }
+
+
+    getParticipantNames();
+  </script>
+</body>
+</html>
