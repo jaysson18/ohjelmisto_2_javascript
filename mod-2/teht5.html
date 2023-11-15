@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check and Sort Numbers</title>
+</head>
+<body>
+  <script>
+
+    function getAndCheckNumbers() {
+      let numbers = [];
+      let enteredNumbers = new Set();
+
+      while (true) {
+        let input = parseFloat(prompt("Enter a number (0 to stop):"));
+
+        if (input === 0) {
+          break;
+        }
+
+        if (enteredNumbers.has(input)) {
+          console.log("Number has already been given: " + input);
+          console.log("Stopping operation.");
+          break;
+        }
+
+        enteredNumbers.add(input);
+        numbers.push(input);
+      }
+
+      displayAscendingNumbers(numbers);
+    }
+
+
+    function displayAscendingNumbers(numbers) {
+      numbers.sort((a, b) => a - b);
+      console.log("Given numbers in ascending order:");
+      console.log(numbers);
+    }
+
+
+    getAndCheckNumbers();
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sorting numbers</title>
+</head>
+<body>
+<script>
+
+  function getAndDisplayNumbers() {
+    let numbers = [];
+    let input = 1;
+
+    while (input !== 0) {
+      input = parseFloat(prompt("Enter a number (0 to stop):"));
+      if (input !== 0) {
+        numbers.push(input);
+      }
+    }
+
+    displayNumbersDescending(numbers);
+
+  }
+
+  function displayNumbersDescending(numbers) {
+    numbers.sort((a,b) => b - a);
+    console.log("Numbers in decending order:");
+    console.log(numbers);
+  }
+
+  getAndDisplayNumbers();
+
+
+
+</script>
+</body>
+</html>
