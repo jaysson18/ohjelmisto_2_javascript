@@ -1,24 +1,17 @@
-'use strict'
-document.addEventListener("DOMContentLoaded", function () {
-    const ulElement = document.createElement("ul");
+const targetElement = document.getElementById('target');
+
+const firstItem = document.createElement('li');
+firstItem.textContent = 'First item';
+
+const secondItem = document.createElement('li');
+secondItem.textContent = 'Second item';
+
+secondItem.classList.add('my-item');
+
+const thirdItem = document.createElement('li');
+thirdItem.textContent = 'Third item';
 
 
-    const li1 = document.createElement("li");
-    const li2 = document.createElement("li");
-    const li3 = document.createElement("li");
-
-    li1.textContent = "First item";
-    li2.textContent = "Second item";
-    li3.textContent = "Third item";
-
-    li2.classList.add("my-item");
-
-
-    ulElement.appendChild(li1);
-    ulElement.appendChild(li2);
-    ulElement.appendChild(li3);
-
-    const targetElement = document.getElementById("target");
-
-    targetElement.appendChild(ulElement);
-});
+targetElement.appendChild(firstItem);
+targetElement.appendChild(secondItem);
+targetElement.appendChild(thirdItem);

@@ -1,17 +1,13 @@
-'use strict'
-document.addEventListener("DOMContentLoaded", function() {
-    // array of names
-    const names = ["John", "Paul", "Jones"];
+'use strict';
 
-    const targetElement = document.getElementById("target");
+const targetElement = document.getElementById('target');
 
-    const ulElement = document.createElement("ul");
+const names = ['John', 'Paul', 'Jones'];
 
-    for (let i = 0; i < names.length; i++) {
-        const liElement = document.createElement("li");
-        liElement.textContent = names[i];
-        ulElement.appendChild(liElement);
-    }
+var htmlCode = '';
 
-    targetElement.innerHTML = ulElement.outerHTML;
-});
+for (var i = 0; i < names.length; i++) {
+    htmlCode += '<li>' + names[i] + '</li>';
+}
+
+targetElement.innerHTML = htmlCode;
